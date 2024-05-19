@@ -2,10 +2,8 @@
 
 namespace Ziming\LaravelVidaId\Requests\EMeterai;
 
-use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Saloon\Traits\Body\HasJsonBody;
 
 class CheckStampingStatus extends Request
 {
@@ -16,8 +14,7 @@ class CheckStampingStatus extends Request
      */
     public function __construct(
         protected readonly string $refNum,
-    )
-    {
+    ) {
 
     }
 
@@ -30,6 +27,6 @@ class CheckStampingStatus extends Request
 
     public function resolveEndpoint(): string
     {
-        return '/api/v1/emeterai/docstamp/' . $this->refNum;
+        return '/api/v1/emeterai/docstamp/'.$this->refNum;
     }
 }

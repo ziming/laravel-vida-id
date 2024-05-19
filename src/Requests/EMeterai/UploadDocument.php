@@ -23,15 +23,14 @@ class UploadDocument extends Request implements HasBody
         protected readonly int $lly,
         protected readonly string $refNum,
         protected readonly string $document,
-    )
-    {
+    ) {
 
     }
 
     protected function defaultBody(): array
     {
         return [
-'codeDocument' => $this->codeDocument,
+            'codeDocument' => $this->codeDocument,
             'page' => $this->page,
             'llx' => $this->llx,
             'lly' => $this->lly,

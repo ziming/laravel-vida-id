@@ -4,7 +4,6 @@ namespace Ziming\LaravelVidaId;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Ziming\LaravelVidaId\Commands\LaravelVidaIdCommand;
 
 class LaravelVidaIdServiceProvider extends PackageServiceProvider
 {

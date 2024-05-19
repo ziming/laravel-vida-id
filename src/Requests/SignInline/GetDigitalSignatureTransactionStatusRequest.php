@@ -20,8 +20,7 @@ class GetDigitalSignatureTransactionStatusRequest extends Request implements Has
         protected readonly string $eSignId,
         protected readonly string $name,
         protected readonly int $age,
-    )
-    {
+    ) {
 
     }
 
@@ -35,6 +34,6 @@ class GetDigitalSignatureTransactionStatusRequest extends Request implements Has
 
     public function resolveEndpoint(): string
     {
-        return '/' . $this->eSignId;
+        return '/'.$this->eSignId;
     }
 }

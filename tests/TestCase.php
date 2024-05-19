@@ -2,7 +2,6 @@
 
 namespace Ziming\LaravelVidaId\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Ziming\LaravelVidaId\LaravelVidaIdServiceProvider;
 

@@ -18,8 +18,7 @@ class CheckIdentityVerificationStatusRequest extends Request implements HasBody
      */
     public function __construct(
         protected readonly string $eventId
-    )
-    {
+    ) {
 
     }
 

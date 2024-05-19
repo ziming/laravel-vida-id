@@ -35,8 +35,7 @@ class PerformIdentityVerificationRequest extends Request implements HasBody
         protected readonly ?string $province = null,
         protected readonly ?string $partnerTrxId = null,
         protected readonly ?string $idCardPhoto = null,
-    )
-    {
+    ) {
 
     }
 

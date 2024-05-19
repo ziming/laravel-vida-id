@@ -5,7 +5,6 @@ namespace Ziming\LaravelVidaId\Requests\SignInline;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Saloon\Http\SoloRequest;
 use Saloon\Traits\Body\HasJsonBody;
 
 class DigitalSignatureWithPowerOfAttorneyRequest extends Request implements HasBody
@@ -42,8 +41,7 @@ class DigitalSignatureWithPowerOfAttorneyRequest extends Request implements HasB
         protected readonly string $signingInfoWidth, // maybe int?
         protected readonly bool $singingInfoQrEnable = false,
         protected readonly array $signingInfoAppearance = [],
-    )
-    {
+    ) {
 
     }
 

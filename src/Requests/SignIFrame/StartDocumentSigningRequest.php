@@ -5,7 +5,6 @@ namespace Ziming\LaravelVidaId\Requests\SignIFrame;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Saloon\Http\SoloRequest;
 use Saloon\Traits\Body\HasJsonBody;
 
 /*
@@ -32,12 +31,9 @@ class StartDocumentSigningRequest extends Request implements HasBody
         protected readonly string $deviceNetworkProvider,
 
         protected readonly array $signingInfo,
-    )
-    {
+    ) {
 
     }
-
-
 
     protected function defaultBody(): array
     {

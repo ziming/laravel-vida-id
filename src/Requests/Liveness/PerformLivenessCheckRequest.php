@@ -20,8 +20,7 @@ class PerformLivenessCheckRequest extends Request implements HasBody
         protected readonly string $image,
         protected readonly ?string $partnerTrxId = null, // the api docs say it is required & also optional. Confusing
         protected readonly bool $imgManipulationCheckEnabled = true,
-    )
-    {
+    ) {
 
     }
 

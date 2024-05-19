@@ -2,10 +2,8 @@
 
 namespace Ziming\LaravelVidaId\Requests\SignIFrame;
 
-use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Saloon\Traits\Body\HasJsonBody;
 
 class GetSigningStatusRequest extends Request
 {
@@ -16,13 +14,12 @@ class GetSigningStatusRequest extends Request
      */
     public function __construct(
         protected readonly string $eSignId,
-    )
-    {
+    ) {
 
     }
 
     public function resolveEndpoint(): string
     {
-        return '/' . $this->eSignId;
+        return '/'.$this->eSignId;
     }
 }

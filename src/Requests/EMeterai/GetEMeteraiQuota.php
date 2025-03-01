@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ziming\LaravelVidaId\Requests\EMeterai;
 
 use Saloon\Enums\Method;
@@ -12,10 +14,7 @@ class GetEMeteraiQuota extends Request
     /*
      * @see https://docs.vida.id/vida-identity-platform/integration-methods/api/emeterai/api-reference/get-quota
      */
-    public function __construct()
-    {
-
-    }
+    public function __construct() {}
 
     protected function defaultHeaders(): array
     {

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ziming\LaravelVidaId\Requests\EMeterai;
 
 use Saloon\Contracts\Body\HasBody;
@@ -23,9 +25,7 @@ class UploadDocument extends Request implements HasBody
         protected readonly int $lly,
         protected readonly string $refNum,
         protected readonly string $document,
-    ) {
-
-    }
+    ) {}
 
     protected function defaultBody(): array
     {

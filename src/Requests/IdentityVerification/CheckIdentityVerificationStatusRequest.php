@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ziming\LaravelVidaId\Requests\IdentityVerification;
 
 use Saloon\Contracts\Body\HasBody;
@@ -18,9 +20,7 @@ class CheckIdentityVerificationStatusRequest extends Request implements HasBody
      */
     public function __construct(
         protected readonly string $eventId
-    ) {
-
-    }
+    ) {}
 
     public function resolveEndpoint(): string
     {

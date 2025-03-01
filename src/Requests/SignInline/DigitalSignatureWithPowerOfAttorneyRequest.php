@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ziming\LaravelVidaId\Requests\SignInline;
 
 use Saloon\Contracts\Body\HasBody;
@@ -41,9 +43,7 @@ class DigitalSignatureWithPowerOfAttorneyRequest extends Request implements HasB
         protected readonly string $signingInfoWidth, // maybe int?
         protected readonly bool $singingInfoQrEnable = false,
         protected readonly array $signingInfoAppearance = [],
-    ) {
-
-    }
+    ) {}
 
     protected function defaultQuery(): array
     {

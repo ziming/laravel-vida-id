@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ziming\LaravelVidaId\Requests\IdentityVerification;
 
 use Saloon\Contracts\Body\HasBody;
@@ -35,9 +37,7 @@ class PerformIdentityVerificationRequest extends Request implements HasBody
         protected readonly ?string $province = null,
         protected readonly ?string $partnerTrxId = null,
         protected readonly ?string $idCardPhoto = null,
-    ) {
-
-    }
+    ) {}
 
     protected function defaultBody(): array
     {

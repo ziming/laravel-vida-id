@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ziming\LaravelVidaId\Requests\EMeterai;
 
 use Saloon\Enums\Method;
@@ -14,9 +16,7 @@ class CheckStampingStatus extends Request
      */
     public function __construct(
         protected readonly string $refNum,
-    ) {
-
-    }
+    ) {}
 
     protected function defaultHeaders(): array
     {

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ziming\LaravelVidaId\Requests\SignInline;
 
 use Saloon\Contracts\Body\HasBody;
@@ -20,9 +22,7 @@ class GetDigitalSignatureTransactionStatusRequest extends Request implements Has
         protected readonly string $eSignId,
         protected readonly string $name,
         protected readonly int $age,
-    ) {
-
-    }
+    ) {}
 
     protected function defaultHeaders(): array
     {

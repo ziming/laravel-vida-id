@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'client_id' => env('VIDA_ID_CLIENT_ID'),
     'client_secret' => env('VIDA_ID_CLIENT_SECRET'),

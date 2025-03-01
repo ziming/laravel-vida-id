@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ziming\LaravelVidaId\Connectors;
 
 use Saloon\Helpers\OAuth2\OAuthConfig;

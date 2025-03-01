@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ziming\LaravelVidaId\Requests\SignIFrame;
 
 use Saloon\Enums\Method;
@@ -14,9 +16,7 @@ class GetSigningStatusRequest extends Request
      */
     public function __construct(
         protected readonly string $eSignId,
-    ) {
-
-    }
+    ) {}
 
     public function resolveEndpoint(): string
     {

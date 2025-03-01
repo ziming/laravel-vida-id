@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ziming\LaravelVidaId\Requests\SignInline;
 
 use Saloon\Contracts\Body\HasBody;
@@ -33,9 +35,7 @@ class DigitalSignatureRequest extends Request implements HasBody
         protected readonly string $deviceNetworkProvider,
 
         protected readonly array $signingInfo,
-    ) {
-
-    }
+    ) {}
 
     protected function defaultBody(): array
     {

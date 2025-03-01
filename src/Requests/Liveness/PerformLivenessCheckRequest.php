@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ziming\LaravelVidaId\Requests\Liveness;
 
 use Saloon\Contracts\Body\HasBody;
@@ -20,9 +22,7 @@ class PerformLivenessCheckRequest extends Request implements HasBody
         protected readonly string $image,
         protected readonly ?string $partnerTrxId = null, // the api docs say it is required & also optional. Confusing
         protected readonly bool $imgManipulationCheckEnabled = true,
-    ) {
-
-    }
+    ) {}
 
     protected function defaultBody(): array
     {

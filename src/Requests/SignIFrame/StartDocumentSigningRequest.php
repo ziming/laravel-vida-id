@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ziming\LaravelVidaId\Requests\SignIFrame;
 
 use Saloon\Contracts\Body\HasBody;
@@ -31,9 +33,7 @@ class StartDocumentSigningRequest extends Request implements HasBody
         protected readonly string $deviceNetworkProvider,
 
         protected readonly array $signingInfo,
-    ) {
-
-    }
+    ) {}
 
     protected function defaultBody(): array
     {

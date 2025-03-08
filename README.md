@@ -21,7 +21,7 @@ composer require ziming/laravel-vida-id
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-vida-id-config"
+php artisan vendor:publish --tag="vida-id-config"
 ```
 
 This is the contents of the published config file:

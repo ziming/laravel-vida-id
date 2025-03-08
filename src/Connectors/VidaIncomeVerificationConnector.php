@@ -8,7 +8,10 @@ use Saloon\Helpers\OAuth2\OAuthConfig;
 use Saloon\Http\Connector;
 use Saloon\Traits\OAuth2\ClientCredentialsGrant;
 
-class VidaEMeteraiConnector extends Connector
+/**
+ * @see https://docs.vida.id/vida-identity-platform/integration-methods/api/income-verification/api-reference/income-verification
+ */
+class VidaIncomeVerificationConnector extends Connector
 {
     use ClientCredentialsGrant;
 
@@ -22,6 +25,6 @@ class VidaEMeteraiConnector extends Connector
 
     public function resolveBaseUrl(): string
     {
-        return config('vida-id.e_meterai_api_base_url');
+        return config('vida-id.income_verification_api_base_url');
     }
 }

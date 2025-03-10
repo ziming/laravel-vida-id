@@ -8,11 +8,11 @@ use Ziming\LaravelVidaId\Requests\IdentityVerification\GetIdentityVerificationDa
 use Ziming\LaravelVidaId\Requests\IdentityVerification\PerformIdentityVerificationRequest;
 
 /**
- * @throws \Saloon\Exceptions\Request\FatalRequestException
- * @throws \Saloon\Exceptions\Request\RequestException
+ * @throws Saloon\Exceptions\Request\FatalRequestException
+ * @throws Saloon\Exceptions\Request\RequestException
  * @throws JsonException
  */
-it( 'it can perform identity verification request', function (): void {
+it('it can perform identity verification request', function (): void {
 
     $vidaIdentityVerificationConnector = new VidaIdentityVerificationConnector;
 
@@ -34,7 +34,7 @@ it( 'it can perform identity verification request', function (): void {
         'data',
         'data.eventId',
         'data.fields', // array of score & field
-        'data.certificateIssued'
+        'data.certificateIssued',
     ]); // 200
 
 });
@@ -60,7 +60,6 @@ it('it can get identity verification data request', function (): void {
 
     $vidaIdentityVerificationConnector->send($getIdentityVerificationDataRequest);
 });
-
 
 $internalServerErrorsDataSet = [
     [

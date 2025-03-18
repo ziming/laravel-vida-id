@@ -48,8 +48,10 @@ class PerformIdentityVerificationRequest extends Request implements HasBody
             'fullName' => $this->fullName,
             'dob' => $this->dob,
             'selfiePhoto' => $this->selfiePhoto,
-            'ConsentGiven' => $this->consentGiven,
-            'ConsentedAt' => $this->consentedAt,
+            'consent' => [
+                'consentGiven' => $this->consentGiven,
+                'consentedAt' => $this->consentedAt,
+            ],
             'motherMaidenName' => $this->motherMaidenName,
             'familyCardNo' => $this->familyCardNo,
             'pob' => $this->pob,

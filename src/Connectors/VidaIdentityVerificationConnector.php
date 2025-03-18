@@ -7,10 +7,16 @@ namespace Ziming\LaravelVidaId\Connectors;
 use Saloon\Helpers\OAuth2\OAuthConfig;
 use Saloon\Http\Connector;
 use Saloon\Traits\OAuth2\ClientCredentialsGrant;
+use Ziming\LaravelVidaId\Resources\IdentityVerificationResource;
 
 class VidaIdentityVerificationConnector extends Connector
 {
     use ClientCredentialsGrant;
+
+    public function identityVerificationResource(): IdentityVerificationResource
+    {
+        return new IdentityVerificationResource($this);
+    }
 
     protected function defaultOauthConfig(): OAuthConfig
     {

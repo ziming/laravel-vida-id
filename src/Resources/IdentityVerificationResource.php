@@ -27,8 +27,7 @@ class IdentityVerificationResource extends BaseResource
         string $dob,
         string $idCardPhoto,
         string $partnerTrxId,
-    ): Response
-    {
+    ): Response {
         return $this->connector->send(new WebElectronicKycRequest(
             $mobile,
             $email,
@@ -63,14 +62,14 @@ class IdentityVerificationResource extends BaseResource
      * @throws RequestException
      */
     public function performIdentityVerificationRequest(
-        string  $mobile,
-        string  $email,
-        string  $govId,
-        string  $fullName,
-        string  $dob,
-        string  $selfiePhoto,
-        bool    $consentGiven,
-        string  $consentedAt,
+        string $mobile,
+        string $email,
+        string $govId,
+        string $fullName,
+        string $dob,
+        string $selfiePhoto,
+        bool $consentGiven,
+        string $consentedAt,
         ?string $motherMaidenName = null,
         ?string $familyCardNo = null,
         ?string $pob = null,
@@ -81,8 +80,7 @@ class IdentityVerificationResource extends BaseResource
         ?string $province = null,
         ?string $partnerTrxId = null,
         ?string $idCardPhoto = null,
-    ): Response
-    {
+    ): Response {
         return $this->connector->send(new PerformIdentityVerificationRequest(
             $mobile,
             $email,

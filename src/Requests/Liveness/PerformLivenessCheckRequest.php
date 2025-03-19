@@ -35,6 +35,6 @@ class PerformLivenessCheckRequest extends Request implements HasBody
 
     public function resolveEndpoint(): string
     {
-        return '/';
+        return 'services/face/liveliness';
     }
 }

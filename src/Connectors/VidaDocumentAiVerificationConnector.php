@@ -7,10 +7,16 @@ namespace Ziming\LaravelVidaId\Connectors;
 use Saloon\Helpers\OAuth2\OAuthConfig;
 use Saloon\Http\Connector;
 use Saloon\Traits\OAuth2\ClientCredentialsGrant;
+use Ziming\LaravelVidaId\Resources\DocumentAiResource;
 
 class VidaDocumentAiVerificationConnector extends Connector
 {
     use ClientCredentialsGrant;
+
+    public function documentAiResource(): DocumentAiResource
+    {
+        return new DocumentAiResource($this);
+    }
 
     protected function defaultOauthConfig(): OAuthConfig
     {
@@ -18,7 +24,7 @@ class VidaDocumentAiVerificationConnector extends Connector
             ->setClientId(config('vida-id.client_id'))
             ->setClientSecret(config('vida-id.client_secret'))
             ->setTokenEndpoint(config('vida-id.authentication_api_url'))
-            ->setDefaultScopes(['openid']); // Add the required scope
+            ->setDefaultScopes(['openid']);
     }
 
     public function resolveBaseUrl(): string

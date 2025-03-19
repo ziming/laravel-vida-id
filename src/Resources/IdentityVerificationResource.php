@@ -28,7 +28,10 @@ class IdentityVerificationResource extends BaseResource
         string $idCardPhoto,
         string $partnerTrxId,
     ): Response {
-        return $this->connector->send(new WebElectronicKycRequest(
+        $authenticator = $this->connector->getAccessToken();
+        $token = $authenticator->getAccessToken();
+
+        $request = new WebElectronicKycRequest(
             $mobile,
             $email,
             $govId,
@@ -36,25 +39,33 @@ class IdentityVerificationResource extends BaseResource
             $dob,
             $idCardPhoto,
             $partnerTrxId,
-        ));
+        );
+
+        $request->headers()->add('Authorization', 'Bearer ' . $token);
+
+        return $this->connector->send($request);
     }
 
-    /**
-     * @throws FatalRequestException
-     * @throws RequestException
-     */
     public function getIdentityVerificationData(string $eventId): Response
     {
-        return $this->connector->send(new GetIdentityVerificationDataRequest($eventId));
+        $authenticator = $this->connector->getAccessToken();
+        $token = $authenticator->getAccessToken();
+
+        $request = new GetIdentityVerificationDataRequest($eventId);
+        $request->headers()->add('Authorization', 'Bearer ' . $token);
+
+        return $this->connector->send($request);
     }
 
-    /**
-     * @throws FatalRequestException
-     * @throws RequestException
-     */
     public function checkIdentityVerificationStatus(string $eventId): Response
     {
-        return $this->connector->send(new CheckIdentityVerificationStatusRequest($eventId));
+        $authenticator = $this->connector->getAccessToken();
+        $token = $authenticator->getAccessToken();
+
+        $request = new CheckIdentityVerificationStatusRequest($eventId);
+        $request->headers()->add('Authorization', 'Bearer ' . $token);
+
+        return $this->connector->send($request);
     }
 
     /**
@@ -81,7 +92,11 @@ class IdentityVerificationResource extends BaseResource
         ?string $partnerTrxId = null,
         ?string $idCardPhoto = null,
     ): Response {
-        return $this->connector->send(new PerformIdentityVerificationRequest(
+        // Get the access token
+        $authenticator = $this->connector->getAccessToken();
+        $token = $authenticator->getAccessToken();
+
+        $request = new PerformIdentityVerificationRequest(
             $mobile,
             $email,
             $govId,
@@ -100,6 +115,11 @@ class IdentityVerificationResource extends BaseResource
             $province,
             $partnerTrxId,
             $idCardPhoto,
-        ));
+        );
+
+        // Add the Authorization header
+        $request->headers()->add('Authorization', 'Bearer ' . $token);
+
+        return $this->connector->send($request);
     }
 }

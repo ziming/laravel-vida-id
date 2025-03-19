@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Ziming\LaravelVidaId\Resources;
 
-use Illuminate\Support\Str;
 use Saloon\Exceptions\Request\FatalRequestException;
 use Saloon\Exceptions\Request\RequestException;
 use Saloon\Http\BaseResource;
 use Saloon\Http\Response;
 use Ziming\LaravelVidaId\Requests\DocumentAi\DocumentAiVerificationRequest;
+use Illuminate\Support\Str;
 
 class DocumentAiResource extends BaseResource
 {

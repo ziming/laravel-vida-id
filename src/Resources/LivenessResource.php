@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Ziming\LaravelVidaId\Resources;
 
+use Illuminate\Support\Str;
 use Saloon\Http\BaseResource;
 use Ziming\LaravelVidaId\Requests\Liveness\PerformLivenessCheckRequest;
-use Illuminate\Support\Str;
 
 class LivenessResource extends BaseResource
 {

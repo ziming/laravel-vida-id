@@ -20,7 +20,8 @@ class VidaIncomeVerificationConnector extends Connector
         return OAuthConfig::make()
             ->setClientId(config('vida-id.client_id'))
             ->setClientSecret(config('vida-id.client_secret'))
-            ->setTokenEndpoint(config('vida-id.authentication_api_url'));
+            ->setTokenEndpoint(config('vida-id.authentication_api_url'))
+            ->setAllowBaseUrlOverride(true);
     }
 
     public function resolveBaseUrl(): string

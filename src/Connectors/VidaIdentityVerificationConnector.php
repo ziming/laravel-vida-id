@@ -24,7 +24,8 @@ class VidaIdentityVerificationConnector extends Connector
             ->setClientId(config('vida-id.client_id'))
             ->setClientSecret(config('vida-id.client_secret'))
             ->setTokenEndpoint(config('vida-id.authentication_api_url'))
-            ->setDefaultScopes(['openid']); // Add the required scope
+            ->setDefaultScopes(['openid']) // Add the required scope
+            ->setAllowBaseUrlOverride(true);
 
     }
 
